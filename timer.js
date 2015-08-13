@@ -17,8 +17,8 @@ $(document).ready(function () {
         }
         
         timer = window.setInterval(function () {
-            seconds--;
             location.innerHTML = seconds;
+            seconds--;
             
             if (seconds <= 0) {
                 seconds = parseInt(time.value, 10);
@@ -40,5 +40,7 @@ $(document).ready(function () {
         location.innerHTML = 0;
         flag = 0;
         iterations.innerHTML = 0;
+        counter = 0;
+        time.value = "";
     });
 });
