@@ -17,8 +17,8 @@ $(document).ready(function () {
         }
         
         timer = window.setInterval(function () {
-            location.innerHTML = seconds;
             seconds--;
+            location.innerHTML = seconds;
             
             if (seconds <= 0) {
                 seconds = parseInt(time.value, 10);
