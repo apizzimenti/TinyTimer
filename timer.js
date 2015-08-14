@@ -7,7 +7,7 @@ $(document).ready(function () {
     "use strict";
     var seconds, timer, location = document.getElementById("location"), $start = $("#start"), counter = 0,
         $stop = $("#stop"), $clear = $("#clear"), flag = 0, time = document.getElementById("time"),
-        iterations = document.getElementById("iterations");
+        iterations = document.getElementById("iterations"), audio = document.getElementById("ding");
 
     $start.click(function () {
         seconds = parseInt(time.value, 10);
@@ -21,6 +21,7 @@ $(document).ready(function () {
             location.innerHTML = seconds;
             
             if (seconds <= 0) {
+                audio.play();
                 seconds = parseInt(time.value, 10);
                 flag = 0;
                 counter++;
